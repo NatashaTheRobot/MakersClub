@@ -1,0 +1,475 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		9C99E155181BFD310019E93A /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9C99E154181BFD310019E93A /* Foundation.framework */; };
+		9C99E157181BFD310019E93A /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9C99E156181BFD310019E93A /* CoreGraphics.framework */; };
+		9C99E159181BFD310019E93A /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9C99E158181BFD310019E93A /* UIKit.framework */; };
+		9C99E15F181BFD310019E93A /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 9C99E15D181BFD310019E93A /* InfoPlist.strings */; };
+		9C99E161181BFD310019E93A /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 9C99E160181BFD310019E93A /* main.m */; };
+		9C99E165181BFD310019E93A /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 9C99E164181BFD310019E93A /* AppDelegate.m */; };
+		9C99E168181BFD310019E93A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9C99E166181BFD310019E93A /* Main.storyboard */; };
+		9C99E16B181BFD310019E93A /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9C99E16A181BFD310019E93A /* ViewController.m */; };
+		9C99E16D181BFD310019E93A /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9C99E16C181BFD310019E93A /* Images.xcassets */; };
+		9C99E174181BFD320019E93A /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9C99E173181BFD320019E93A /* XCTest.framework */; };
+		9C99E175181BFD320019E93A /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9C99E154181BFD310019E93A /* Foundation.framework */; };
+		9C99E176181BFD320019E93A /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9C99E158181BFD310019E93A /* UIKit.framework */; };
+		9C99E17E181BFD320019E93A /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 9C99E17C181BFD320019E93A /* InfoPlist.strings */; };
+		9C99E180181BFD320019E93A /* MakersClubTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 9C99E17F181BFD320019E93A /* MakersClubTests.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		9C99E177181BFD320019E93A /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 9C99E149181BFD310019E93A /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 9C99E150181BFD310019E93A;
+			remoteInfo = MakersClub;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		9C99E151181BFD310019E93A /* MakersClub.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MakersClub.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		9C99E154181BFD310019E93A /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		9C99E156181BFD310019E93A /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		9C99E158181BFD310019E93A /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		9C99E15C181BFD310019E93A /* MakersClub-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "MakersClub-Info.plist"; sourceTree = "<group>"; };
+		9C99E15E181BFD310019E93A /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		9C99E160181BFD310019E93A /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		9C99E162181BFD310019E93A /* MakersClub-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "MakersClub-Prefix.pch"; sourceTree = "<group>"; };
+		9C99E163181BFD310019E93A /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		9C99E164181BFD310019E93A /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		9C99E167181BFD310019E93A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		9C99E169181BFD310019E93A /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		9C99E16A181BFD310019E93A /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		9C99E16C181BFD310019E93A /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		9C99E172181BFD320019E93A /* MakersClubTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MakersClubTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		9C99E173181BFD320019E93A /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
+		9C99E17B181BFD320019E93A /* MakersClubTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "MakersClubTests-Info.plist"; sourceTree = "<group>"; };
+		9C99E17D181BFD320019E93A /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		9C99E17F181BFD320019E93A /* MakersClubTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MakersClubTests.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		9C99E14E181BFD310019E93A /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9C99E157181BFD310019E93A /* CoreGraphics.framework in Frameworks */,
+				9C99E159181BFD310019E93A /* UIKit.framework in Frameworks */,
+				9C99E155181BFD310019E93A /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		9C99E16F181BFD320019E93A /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9C99E174181BFD320019E93A /* XCTest.framework in Frameworks */,
+				9C99E176181BFD320019E93A /* UIKit.framework in Frameworks */,
+				9C99E175181BFD320019E93A /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		9C99E148181BFD310019E93A = {
+			isa = PBXGroup;
+			children = (
+				9C99E15A181BFD310019E93A /* MakersClub */,
+				9C99E179181BFD320019E93A /* MakersClubTests */,
+				9C99E153181BFD310019E93A /* Frameworks */,
+				9C99E152181BFD310019E93A /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		9C99E152181BFD310019E93A /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				9C99E151181BFD310019E93A /* MakersClub.app */,
+				9C99E172181BFD320019E93A /* MakersClubTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		9C99E153181BFD310019E93A /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				9C99E154181BFD310019E93A /* Foundation.framework */,
+				9C99E156181BFD310019E93A /* CoreGraphics.framework */,
+				9C99E158181BFD310019E93A /* UIKit.framework */,
+				9C99E173181BFD320019E93A /* XCTest.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		9C99E15A181BFD310019E93A /* MakersClub */ = {
+			isa = PBXGroup;
+			children = (
+				9C99E163181BFD310019E93A /* AppDelegate.h */,
+				9C99E164181BFD310019E93A /* AppDelegate.m */,
+				9C99E166181BFD310019E93A /* Main.storyboard */,
+				9C99E169181BFD310019E93A /* ViewController.h */,
+				9C99E16A181BFD310019E93A /* ViewController.m */,
+				9C99E16C181BFD310019E93A /* Images.xcassets */,
+				9C99E15B181BFD310019E93A /* Supporting Files */,
+			);
+			path = MakersClub;
+			sourceTree = "<group>";
+		};
+		9C99E15B181BFD310019E93A /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				9C99E15C181BFD310019E93A /* MakersClub-Info.plist */,
+				9C99E15D181BFD310019E93A /* InfoPlist.strings */,
+				9C99E160181BFD310019E93A /* main.m */,
+				9C99E162181BFD310019E93A /* MakersClub-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		9C99E179181BFD320019E93A /* MakersClubTests */ = {
+			isa = PBXGroup;
+			children = (
+				9C99E17F181BFD320019E93A /* MakersClubTests.m */,
+				9C99E17A181BFD320019E93A /* Supporting Files */,
+			);
+			path = MakersClubTests;
+			sourceTree = "<group>";
+		};
+		9C99E17A181BFD320019E93A /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				9C99E17B181BFD320019E93A /* MakersClubTests-Info.plist */,
+				9C99E17C181BFD320019E93A /* InfoPlist.strings */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		9C99E150181BFD310019E93A /* MakersClub */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 9C99E183181BFD320019E93A /* Build configuration list for PBXNativeTarget "MakersClub" */;
+			buildPhases = (
+				9C99E14D181BFD310019E93A /* Sources */,
+				9C99E14E181BFD310019E93A /* Frameworks */,
+				9C99E14F181BFD310019E93A /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = MakersClub;
+			productName = MakersClub;
+			productReference = 9C99E151181BFD310019E93A /* MakersClub.app */;
+			productType = "com.apple.product-type.application";
+		};
+		9C99E171181BFD320019E93A /* MakersClubTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 9C99E186181BFD320019E93A /* Build configuration list for PBXNativeTarget "MakersClubTests" */;
+			buildPhases = (
+				9C99E16E181BFD320019E93A /* Sources */,
+				9C99E16F181BFD320019E93A /* Frameworks */,
+				9C99E170181BFD320019E93A /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				9C99E178181BFD320019E93A /* PBXTargetDependency */,
+			);
+			name = MakersClubTests;
+			productName = MakersClubTests;
+			productReference = 9C99E172181BFD320019E93A /* MakersClubTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		9C99E149181BFD310019E93A /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0500;
+				ORGANIZATIONNAME = NatashaTheRobot;
+				TargetAttributes = {
+					9C99E171181BFD320019E93A = {
+						TestTargetID = 9C99E150181BFD310019E93A;
+					};
+				};
+			};
+			buildConfigurationList = 9C99E14C181BFD310019E93A /* Build configuration list for PBXProject "MakersClub" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 9C99E148181BFD310019E93A;
+			productRefGroup = 9C99E152181BFD310019E93A /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				9C99E150181BFD310019E93A /* MakersClub */,
+				9C99E171181BFD320019E93A /* MakersClubTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		9C99E14F181BFD310019E93A /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9C99E16D181BFD310019E93A /* Images.xcassets in Resources */,
+				9C99E15F181BFD310019E93A /* InfoPlist.strings in Resources */,
+				9C99E168181BFD310019E93A /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		9C99E170181BFD320019E93A /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9C99E17E181BFD320019E93A /* InfoPlist.strings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		9C99E14D181BFD310019E93A /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9C99E16B181BFD310019E93A /* ViewController.m in Sources */,
+				9C99E165181BFD310019E93A /* AppDelegate.m in Sources */,
+				9C99E161181BFD310019E93A /* main.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		9C99E16E181BFD320019E93A /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9C99E180181BFD320019E93A /* MakersClubTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		9C99E178181BFD320019E93A /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 9C99E150181BFD310019E93A /* MakersClub */;
+			targetProxy = 9C99E177181BFD320019E93A /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		9C99E15D181BFD310019E93A /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				9C99E15E181BFD310019E93A /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		9C99E166181BFD310019E93A /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				9C99E167181BFD310019E93A /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		9C99E17C181BFD320019E93A /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				9C99E17D181BFD320019E93A /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		9C99E181181BFD320019E93A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		9C99E182181BFD320019E93A /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		9C99E184181BFD320019E93A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "MakersClub/MakersClub-Prefix.pch";
+				INFOPLIST_FILE = "MakersClub/MakersClub-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		9C99E185181BFD320019E93A /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "MakersClub/MakersClub-Prefix.pch";
+				INFOPLIST_FILE = "MakersClub/MakersClub-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+		9C99E187181BFD320019E93A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/MakersClub.app/MakersClub";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "MakersClub/MakersClub-Prefix.pch";
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = "MakersClubTests/MakersClubTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Debug;
+		};
+		9C99E188181BFD320019E93A /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/MakersClub.app/MakersClub";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "MakersClub/MakersClub-Prefix.pch";
+				INFOPLIST_FILE = "MakersClubTests/MakersClubTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		9C99E14C181BFD310019E93A /* Build configuration list for PBXProject "MakersClub" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				9C99E181181BFD320019E93A /* Debug */,
+				9C99E182181BFD320019E93A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		9C99E183181BFD320019E93A /* Build configuration list for PBXNativeTarget "MakersClub" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				9C99E184181BFD320019E93A /* Debug */,
+				9C99E185181BFD320019E93A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		9C99E186181BFD320019E93A /* Build configuration list for PBXNativeTarget "MakersClubTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				9C99E187181BFD320019E93A /* Debug */,
+				9C99E188181BFD320019E93A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 9C99E149181BFD310019E93A /* Project object */;
+}
