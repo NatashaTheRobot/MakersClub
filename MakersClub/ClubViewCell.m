@@ -26,7 +26,7 @@ NSString * const kDefaultClubIconName = @"star.png";
 {
     _clubObject = clubObject;
     
-    self.titleTextLabel.text = [clubObject objectForKey:sParseClassClubTitleKey];
+    self.titleTextLabel.text = [clubObject objectForKey:sParseClassClubKeyTitle];
     
     [self getImageData];
 }
@@ -39,7 +39,7 @@ NSString * const kDefaultClubIconName = @"star.png";
 {
     ClubViewCell *weakSelf = self;
     [UIImage imageFromPFObject:self.clubObject
-                           key:sParseClassClubImageKey
+                           key:sParseClassClubKeyImage
               defaultImageName:kDefaultClubIconName
                completionBlock:^(UIImage *image) {
                    weakSelf.iconImageView.image = image;
