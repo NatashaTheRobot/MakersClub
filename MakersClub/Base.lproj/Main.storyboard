@@ -13,14 +13,14 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
-                            <tableViewCell contentMode="center" selectionStyle="gray" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="ClubViewCell" id="ceI-mP-ovd" customClass="ClubViewCell">
+                            <tableViewCell contentMode="center" selectionStyle="gray" accessoryType="disclosureIndicator" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="ClubViewCell" id="ceI-mP-ovd" customClass="ClubViewCell">
                                 <rect key="frame" x="0.0" y="86" width="320" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="ceI-mP-ovd" id="yH4-bG-QPw">
-                                    <rect key="frame" x="0.0" y="0.0" width="320" height="43"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="287" height="43"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
-                                        <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="iOS Tech Talks" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FIQ-oa-wgb">
+                                        <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="iOS Tech Talks" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FIQ-oa-wgb">
                                             <rect key="frame" x="53" y="11" width="247" height="21"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
@@ -29,23 +29,23 @@
                                         <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="7zW-uk-rXB">
                                             <rect key="frame" x="20" y="9" width="25" height="25"/>
                                             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                            <constraints>
+                                                <constraint firstAttribute="height" constant="25" id="EZM-0p-f1q"/>
+                                                <constraint firstAttribute="width" constant="25" id="NyX-CQ-Jv7"/>
+                                            </constraints>
                                         </imageView>
                                     </subviews>
                                     <constraints>
                                         <constraint firstAttribute="bottom" secondItem="7zW-uk-rXB" secondAttribute="bottom" constant="9" id="1ET-lF-nyo"/>
                                         <constraint firstItem="7zW-uk-rXB" firstAttribute="top" secondItem="yH4-bG-QPw" secondAttribute="top" constant="9" id="3GI-Dn-70D"/>
-                                        <constraint firstItem="FIQ-oa-wgb" firstAttribute="leading" secondItem="yH4-bG-QPw" secondAttribute="leading" constant="53" id="Co6-bo-eFy"/>
-                                        <constraint firstAttribute="trailing" secondItem="FIQ-oa-wgb" secondAttribute="trailing" constant="20" id="MXj-aL-K2I"/>
-                                        <constraint firstItem="FIQ-oa-wgb" firstAttribute="leading" secondItem="7zW-uk-rXB" secondAttribute="trailing" constant="8" id="TMi-xh-k2b"/>
                                         <constraint firstItem="7zW-uk-rXB" firstAttribute="leading" secondItem="yH4-bG-QPw" secondAttribute="leading" constant="20" id="YdW-1E-gLW"/>
-                                        <constraint firstAttribute="bottom" secondItem="FIQ-oa-wgb" secondAttribute="bottom" constant="11" id="lhc-mn-Kyc"/>
-                                        <constraint firstItem="FIQ-oa-wgb" firstAttribute="top" secondItem="yH4-bG-QPw" secondAttribute="top" constant="11" id="yci-UC-D0t"/>
                                     </constraints>
                                 </tableViewCellContentView>
                                 <inset key="separatorInset" minX="53" minY="0.0" maxX="0.0" maxY="0.0"/>
                                 <connections>
                                     <outlet property="iconImageView" destination="7zW-uk-rXB" id="3Qq-iD-geN"/>
                                     <outlet property="titleTextLabel" destination="FIQ-oa-wgb" id="yUC-Ms-H3v"/>
+                                    <segue destination="Iyj-HG-5xl" kind="push" id="AAs-cs-sym"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
@@ -57,6 +57,35 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="hQk-ze-Vv1" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="161" y="135"/>
+        </scene>
+        <!--Github Login View Controller - Apply-->
+        <scene sceneID="SGL-CV-OYq">
+            <objects>
+                <viewController id="Iyj-HG-5xl" customClass="GithubLoginViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="C5f-tP-Il1"/>
+                        <viewControllerLayoutGuide type="bottom" id="mkn-Xf-KM1"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="X1g-R4-qt5">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <webView contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="2da-3m-vf7">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                            </webView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Apply" id="eBt-pW-1ro"/>
+                    <connections>
+                        <outlet property="webView" destination="2da-3m-vf7" id="wiV-yt-qOg"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="COW-4j-0C0" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="567" y="135"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="WG2-p2-QbP">

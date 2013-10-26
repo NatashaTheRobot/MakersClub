@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1B68E91D8EB44A339D475B70 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 70B2F700163A4CD5AB462B36 /* libPods.a */; };
 		9C99E155181BFD310019E93A /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9C99E154181BFD310019E93A /* Foundation.framework */; };
 		9C99E157181BFD310019E93A /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9C99E156181BFD310019E93A /* CoreGraphics.framework */; };
 		9C99E159181BFD310019E93A /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9C99E158181BFD310019E93A /* UIKit.framework */; };
@@ -36,6 +37,9 @@
 		9C99E1B2181C187B0019E93A /* UIImage+MCExtensions.m in Sources */ = {isa = PBXBuildFile; fileRef = 9C99E1B1181C187B0019E93A /* UIImage+MCExtensions.m */; };
 		9C99E1B5181C1E620019E93A /* star.png in Resources */ = {isa = PBXBuildFile; fileRef = 9C99E1B3181C1E620019E93A /* star.png */; };
 		9C99E1B6181C1E620019E93A /* star@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 9C99E1B4181C1E620019E93A /* star@2x.png */; };
+		9C99E1B9181C61CA0019E93A /* GithubLoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9C99E1B8181C61CA0019E93A /* GithubLoginViewController.m */; };
+		9C99E1D9181C6A300019E93A /* Accounts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9C99E1D8181C6A300019E93A /* Accounts.framework */; };
+		9C99E1DB181C6AFB0019E93A /* FacebookSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9C99E1DA181C6AFB0019E93A /* FacebookSDK.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +53,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		2715E622CE2C402A922D3788 /* Pods.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.xcconfig; path = Pods/Pods.xcconfig; sourceTree = "<group>"; };
+		70B2F700163A4CD5AB462B36 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		9C99E151181BFD310019E93A /* MakersClub.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MakersClub.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9C99E154181BFD310019E93A /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		9C99E156181BFD310019E93A /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -85,6 +91,10 @@
 		9C99E1B1181C187B0019E93A /* UIImage+MCExtensions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+MCExtensions.m"; sourceTree = "<group>"; };
 		9C99E1B3181C1E620019E93A /* star.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = star.png; sourceTree = "<group>"; };
 		9C99E1B4181C1E620019E93A /* star@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "star@2x.png"; sourceTree = "<group>"; };
+		9C99E1B7181C61CA0019E93A /* GithubLoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GithubLoginViewController.h; sourceTree = "<group>"; };
+		9C99E1B8181C61CA0019E93A /* GithubLoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GithubLoginViewController.m; sourceTree = "<group>"; };
+		9C99E1D8181C6A300019E93A /* Accounts.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Accounts.framework; path = System/Library/Frameworks/Accounts.framework; sourceTree = SDKROOT; };
+		9C99E1DA181C6AFB0019E93A /* FacebookSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = FacebookSDK.framework; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -92,6 +102,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9C99E1D9181C6A300019E93A /* Accounts.framework in Frameworks */,
 				9C99E19C181C047D0019E93A /* SystemConfiguration.framework in Frameworks */,
 				9C99E19A181C04730019E93A /* StoreKit.framework in Frameworks */,
 				9C99E198181C045E0019E93A /* Security.framework in Frameworks */,
@@ -104,7 +115,9 @@
 				9C99E18C181C04250019E93A /* AudioToolbox.framework in Frameworks */,
 				9C99E159181BFD310019E93A /* UIKit.framework in Frameworks */,
 				9C99E18A181C03E90019E93A /* Parse.framework in Frameworks */,
+				9C99E1DB181C6AFB0019E93A /* FacebookSDK.framework in Frameworks */,
 				9C99E155181BFD310019E93A /* Foundation.framework in Frameworks */,
+				1B68E91D8EB44A339D475B70 /* libPods.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -128,6 +141,7 @@
 				9C99E179181BFD320019E93A /* MakersClubTests */,
 				9C99E153181BFD310019E93A /* Frameworks */,
 				9C99E152181BFD310019E93A /* Products */,
+				2715E622CE2C402A922D3788 /* Pods.xcconfig */,
 			);
 			sourceTree = "<group>";
 		};
@@ -143,6 +157,8 @@
 		9C99E153181BFD310019E93A /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				9C99E1DA181C6AFB0019E93A /* FacebookSDK.framework */,
+				9C99E1D8181C6A300019E93A /* Accounts.framework */,
 				9C99E19B181C047D0019E93A /* SystemConfiguration.framework */,
 				9C99E199181C04730019E93A /* StoreKit.framework */,
 				9C99E197181C045E0019E93A /* Security.framework */,
@@ -157,6 +173,7 @@
 				9C99E156181BFD310019E93A /* CoreGraphics.framework */,
 				9C99E158181BFD310019E93A /* UIKit.framework */,
 				9C99E173181BFD320019E93A /* XCTest.framework */,
+				70B2F700163A4CD5AB462B36 /* libPods.a */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -212,6 +229,8 @@
 			children = (
 				9C99E1A1181C06F50019E93A /* ClubListViewController.h */,
 				9C99E1A2181C06F50019E93A /* ClubListViewController.m */,
+				9C99E1B7181C61CA0019E93A /* GithubLoginViewController.h */,
+				9C99E1B8181C61CA0019E93A /* GithubLoginViewController.m */,
 			);
 			name = ViewControllers;
 			sourceTree = "<group>";
@@ -250,9 +269,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 9C99E183181BFD320019E93A /* Build configuration list for PBXNativeTarget "MakersClub" */;
 			buildPhases = (
+				01A07FA447EA402CA57D09B9 /* Check Pods Manifest.lock */,
 				9C99E14D181BFD310019E93A /* Sources */,
 				9C99E14E181BFD310019E93A /* Frameworks */,
 				9C99E14F181BFD310019E93A /* Resources */,
+				CC4F53A4BC98414EB45A76FA /* Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -337,12 +358,46 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		01A07FA447EA402CA57D09B9 /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		CC4F53A4BC98414EB45A76FA /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Pods-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		9C99E14D181BFD310019E93A /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 				9C99E1B2181C187B0019E93A /* UIImage+MCExtensions.m in Sources */,
+				9C99E1B9181C61CA0019E93A /* GithubLoginViewController.m in Sources */,
 				9C99E165181BFD310019E93A /* AppDelegate.m in Sources */,
 				9C99E1A3181C06F50019E93A /* ClubListViewController.m in Sources */,
 				9C99E1AE181C176A0019E93A /* ClubViewCell.m in Sources */,
@@ -471,6 +526,7 @@
 		};
 		9C99E184181BFD320019E93A /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 2715E622CE2C402A922D3788 /* Pods.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
@@ -488,6 +544,7 @@
 		};
 		9C99E185181BFD320019E93A /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 2715E622CE2C402A922D3788 /* Pods.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
