@@ -16,6 +16,7 @@ DerivedData
 .idea/
 *.hmap
 *.xccheckout
+*Constants.h
 
 #CocoaPods
 Pods
