@@ -22,7 +22,7 @@
         
         self.parseClassName = sParseClassClub;
         
-        self.textKey = sParseClassClubTitleKey;
+        self.textKey = sParseClassClubKeyTitle;
         self.pullToRefreshEnabled = YES;
         
         self.paginationEnabled = YES;
@@ -48,7 +48,7 @@
         query.cachePolicy = kPFCachePolicyCacheThenNetwork;
     }
     
-    [query orderByAscending:sParseClassClubTitleKey];
+    [query orderByAscending:sParseClassClubKeyTitle];
     
     return query;
 }
