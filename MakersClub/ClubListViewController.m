@@ -48,7 +48,7 @@
         query.cachePolicy = kPFCachePolicyCacheThenNetwork;
     }
     
-    [query orderByAscending:@"title"];
+    [query orderByAscending:sParseClassClubTitleKey];
     
     return query;
 }

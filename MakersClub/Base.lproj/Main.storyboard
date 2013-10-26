@@ -20,7 +20,7 @@
                                     <rect key="frame" x="0.0" y="0.0" width="320" height="43"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
-                                        <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="iOS Tech Talks" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FIQ-oa-wgb">
+                                        <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="iOS Tech Talks" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FIQ-oa-wgb">
                                             <rect key="frame" x="53" y="11" width="247" height="21"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
@@ -35,8 +35,11 @@
                                         <constraint firstAttribute="bottom" secondItem="7zW-uk-rXB" secondAttribute="bottom" constant="9" id="1ET-lF-nyo"/>
                                         <constraint firstItem="7zW-uk-rXB" firstAttribute="top" secondItem="yH4-bG-QPw" secondAttribute="top" constant="9" id="3GI-Dn-70D"/>
                                         <constraint firstItem="FIQ-oa-wgb" firstAttribute="leading" secondItem="yH4-bG-QPw" secondAttribute="leading" constant="53" id="Co6-bo-eFy"/>
+                                        <constraint firstAttribute="trailing" secondItem="FIQ-oa-wgb" secondAttribute="trailing" constant="20" id="MXj-aL-K2I"/>
                                         <constraint firstItem="FIQ-oa-wgb" firstAttribute="leading" secondItem="7zW-uk-rXB" secondAttribute="trailing" constant="8" id="TMi-xh-k2b"/>
                                         <constraint firstItem="7zW-uk-rXB" firstAttribute="leading" secondItem="yH4-bG-QPw" secondAttribute="leading" constant="20" id="YdW-1E-gLW"/>
+                                        <constraint firstAttribute="bottom" secondItem="FIQ-oa-wgb" secondAttribute="bottom" constant="11" id="lhc-mn-Kyc"/>
+                                        <constraint firstItem="FIQ-oa-wgb" firstAttribute="top" secondItem="yH4-bG-QPw" secondAttribute="top" constant="11" id="yci-UC-D0t"/>
                                     </constraints>
                                 </tableViewCellContentView>
                                 <inset key="separatorInset" minX="53" minY="0.0" maxX="0.0" maxY="0.0"/>
