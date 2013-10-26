@@ -8,8 +8,13 @@
 
 #import <UIKit/UIKit.h>
 
+typedef void(^ImageFromDataBlock)(UIImage *image);
+
 @interface UIImage (MCExtensions)
 
-+ (instancetype)imageFromPFObject:(PFObject *)object key:(NSString *)key;
++ (void)imageFromPFObject:(PFObject *)object
+                      key:(NSString *)key
+         defaultImageName:(NSString *)defaultImageName
+          completionBlock:(ImageFromDataBlock)imageBlock;
 
 @end

@@ -10,11 +10,20 @@
 
 @implementation UIImage (MCExtensions)
 
-+ (instancetype)imageFromPFObject:(PFObject *)object key:(NSString *)key
++ (void)imageFromPFObject:(PFObject *)object
+                      key:(NSString *)key
+         defaultImageName:(NSString *)defaultImageName
+          completionBlock:(ImageFromDataBlock)imageBlock;
 {
     PFFile *imageFile = [object objectForKey:key];
-    NSData *imageData = [imageFile getData];
-    
-    return [UIImage imageWithData:imageData];
+    [imageFile getDataInBackgroundWithBlock:^(NSData *data, NSError *error) {
+        UIImage *image;
+        if (!error) {
+            image = [UIImage imageWithData:data];
+        } else {
+            image = [UIImage imageNamed:defaultImageName];
+        }
+        imageBlock(image);
+    }];
 }
 @end

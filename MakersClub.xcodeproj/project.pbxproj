@@ -32,9 +32,10 @@
 		9C99E19C181C047D0019E93A /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9C99E19B181C047D0019E93A /* SystemConfiguration.framework */; };
 		9C99E1A3181C06F50019E93A /* ClubListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9C99E1A2181C06F50019E93A /* ClubListViewController.m */; };
 		9C99E1A4181C06F50019E93A /* ClubListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9C99E1A2181C06F50019E93A /* ClubListViewController.m */; };
-		9C99E1AA181C143A0019E93A /* microphone@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 9C99E1A9181C143A0019E93A /* microphone@2x.png */; };
 		9C99E1AE181C176A0019E93A /* ClubViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 9C99E1AD181C176A0019E93A /* ClubViewCell.m */; };
 		9C99E1B2181C187B0019E93A /* UIImage+MCExtensions.m in Sources */ = {isa = PBXBuildFile; fileRef = 9C99E1B1181C187B0019E93A /* UIImage+MCExtensions.m */; };
+		9C99E1B5181C1E620019E93A /* star.png in Resources */ = {isa = PBXBuildFile; fileRef = 9C99E1B3181C1E620019E93A /* star.png */; };
+		9C99E1B6181C1E620019E93A /* star@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 9C99E1B4181C1E620019E93A /* star@2x.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -78,11 +79,12 @@
 		9C99E19D181C05700019E93A /* Constants.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Constants.h; sourceTree = "<group>"; };
 		9C99E1A1181C06F50019E93A /* ClubListViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ClubListViewController.h; sourceTree = "<group>"; };
 		9C99E1A2181C06F50019E93A /* ClubListViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ClubListViewController.m; sourceTree = "<group>"; };
-		9C99E1A9181C143A0019E93A /* microphone@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "microphone@2x.png"; sourceTree = "<group>"; };
 		9C99E1AC181C176A0019E93A /* ClubViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ClubViewCell.h; sourceTree = "<group>"; };
 		9C99E1AD181C176A0019E93A /* ClubViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ClubViewCell.m; sourceTree = "<group>"; };
 		9C99E1B0181C187B0019E93A /* UIImage+MCExtensions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+MCExtensions.h"; sourceTree = "<group>"; };
 		9C99E1B1181C187B0019E93A /* UIImage+MCExtensions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+MCExtensions.m"; sourceTree = "<group>"; };
+		9C99E1B3181C1E620019E93A /* star.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = star.png; sourceTree = "<group>"; };
+		9C99E1B4181C1E620019E93A /* star@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "star@2x.png"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -217,7 +219,8 @@
 		9C99E1A8181C14230019E93A /* Images */ = {
 			isa = PBXGroup;
 			children = (
-				9C99E1A9181C143A0019E93A /* microphone@2x.png */,
+				9C99E1B3181C1E620019E93A /* star.png */,
+				9C99E1B4181C1E620019E93A /* star@2x.png */,
 			);
 			name = Images;
 			sourceTree = "<group>";
@@ -316,9 +319,10 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9C99E1B6181C1E620019E93A /* star@2x.png in Resources */,
 				9C99E16D181BFD310019E93A /* Images.xcassets in Resources */,
+				9C99E1B5181C1E620019E93A /* star.png in Resources */,
 				9C99E15F181BFD310019E93A /* InfoPlist.strings in Resources */,
-				9C99E1AA181C143A0019E93A /* microphone@2x.png in Resources */,
 				9C99E168181BFD310019E93A /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -560,6 +564,7 @@
 				9C99E185181BFD320019E93A /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		9C99E186181BFD320019E93A /* Build configuration list for PBXNativeTarget "MakersClubTests" */ = {
 			isa = XCConfigurationList;
@@ -568,6 +573,7 @@
 				9C99E188181BFD320019E93A /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

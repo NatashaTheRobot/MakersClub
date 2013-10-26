@@ -9,8 +9,16 @@
 #import "ClubViewCell.h"
 #import "UIImage+MCExtensions.h"
 
-@implementation ClubViewCell
+NSString * const kDefaultClubIconName = @"star.png";
 
+@interface ClubViewCell ()
+
+@property (weak, nonatomic) IBOutlet UIImageView *iconImageView;
+@property (weak, nonatomic) IBOutlet UILabel *titleTextLabel;
+
+@end
+
+@implementation ClubViewCell
 
 #pragma mark - Getter / Setter Overrides
 
@@ -18,20 +26,24 @@
 {
     _clubObject = clubObject;
     
-    self.textLabel.text = [clubObject objectForKey:sParseClassClubTitleKey];
-    self.imageView.image = [UIImage imageFromPFObject:clubObject key:sParseClassClubImageKey];
+    self.titleTextLabel.text = [clubObject objectForKey:sParseClassClubTitleKey];
+    
+    [self getImageData];
 }
 
 # pragma mark - Layout Subviews Override
 
-- (void)layoutSubviews
+#pragma mark - Private Methods
+
+- (void)getImageData
 {
-    [super layoutSubviews];
-    
-    self.imageView.frame = CGRectMake(self.imageView.frame.origin.x,
-                                      self.frame.size.height - (self.frame.size.height * 3 / 4),
-                                      25.0f,
-                                      25.0f);
+    ClubViewCell *weakSelf = self;
+    [UIImage imageFromPFObject:self.clubObject
+                           key:sParseClassClubImageKey
+              defaultImageName:kDefaultClubIconName
+               completionBlock:^(UIImage *image) {
+                   weakSelf.iconImageView.image = image;
+               }];
 }
 
 @end

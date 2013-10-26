@@ -8,31 +8,42 @@
         <scene sceneID="Pgc-Z0-2IR">
             <objects>
                 <tableViewController id="OO4-zh-k7L" customClass="ClubListViewController" sceneMemberID="viewController">
-                    <tableView key="view" opaque="NO" clipsSubviews="YES" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="eKx-1U-MJu">
+                    <tableView key="view" opaque="NO" clipsSubviews="YES" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" alwaysBounceVertical="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="eKx-1U-MJu">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
-                            <tableViewCell contentMode="center" selectionStyle="gray" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="ClubViewCell" textLabel="4tw-2i-PS4" imageView="wT2-LT-y1q" style="IBUITableViewCellStyleDefault" id="ceI-mP-ovd" customClass="ClubViewCell">
+                            <tableViewCell contentMode="center" selectionStyle="gray" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="ClubViewCell" id="ceI-mP-ovd" customClass="ClubViewCell">
                                 <rect key="frame" x="0.0" y="86" width="320" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="ceI-mP-ovd" id="yH4-bG-QPw">
                                     <rect key="frame" x="0.0" y="0.0" width="320" height="43"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
-                                        <label opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="left" text="iOS Tech Talks" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="4tw-2i-PS4">
-                                            <rect key="frame" x="55" y="0.0" width="250" height="43"/>
-                                            <autoresizingMask key="autoresizingMask"/>
-                                            <fontDescription key="fontDescription" type="system" pointSize="18"/>
-                                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                        <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="iOS Tech Talks" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FIQ-oa-wgb">
+                                            <rect key="frame" x="53" y="11" width="247" height="21"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                             <nil key="highlightedColor"/>
                                         </label>
-                                        <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleAspectFit" placeholderIntrinsicWidth="25" placeholderIntrinsicHeight="25" image="microphone.png" id="wT2-LT-y1q">
-                                            <rect key="frame" x="15" y="9" width="25" height="25"/>
-                                            <autoresizingMask key="autoresizingMask"/>
+                                        <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="7zW-uk-rXB">
+                                            <rect key="frame" x="20" y="9" width="25" height="25"/>
+                                            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                         </imageView>
                                     </subviews>
+                                    <constraints>
+                                        <constraint firstAttribute="bottom" secondItem="7zW-uk-rXB" secondAttribute="bottom" constant="9" id="1ET-lF-nyo"/>
+                                        <constraint firstItem="7zW-uk-rXB" firstAttribute="top" secondItem="yH4-bG-QPw" secondAttribute="top" constant="9" id="3GI-Dn-70D"/>
+                                        <constraint firstItem="FIQ-oa-wgb" firstAttribute="leading" secondItem="yH4-bG-QPw" secondAttribute="leading" constant="53" id="Co6-bo-eFy"/>
+                                        <constraint firstItem="FIQ-oa-wgb" firstAttribute="leading" secondItem="7zW-uk-rXB" secondAttribute="trailing" constant="8" id="TMi-xh-k2b"/>
+                                        <constraint firstItem="7zW-uk-rXB" firstAttribute="leading" secondItem="yH4-bG-QPw" secondAttribute="leading" constant="20" id="YdW-1E-gLW"/>
+                                    </constraints>
                                 </tableViewCellContentView>
+                                <inset key="separatorInset" minX="53" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                <connections>
+                                    <outlet property="iconImageView" destination="7zW-uk-rXB" id="3Qq-iD-geN"/>
+                                    <outlet property="titleTextLabel" destination="FIQ-oa-wgb" id="yUC-Ms-H3v"/>
+                                </connections>
                             </tableViewCell>
                         </prototypes>
                     </tableView>
@@ -60,9 +71,6 @@
             <point key="canvasLocation" x="-373" y="135"/>
         </scene>
     </scenes>
-    <resources>
-        <image name="microphone.png" width="25" height="25"/>
-    </resources>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar"/>
         <simulatedOrientationMetrics key="orientation"/>
