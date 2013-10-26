@@ -7,6 +7,7 @@
 //
 
 #import "ClubListViewController.h"
+#import "ClubViewCell.h"
 
 @interface ClubListViewController ()
 
@@ -54,11 +55,8 @@
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath object:(PFObject *)clubObject
 {
-    static NSString *CellIdentifier = @"clubCell";
-    
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier];
-    
-    cell.textLabel.text = [clubObject objectForKey:sParseClassClubTitleKey];
+    ClubViewCell *cell = [tableView dequeueReusableCellWithIdentifier:NSStringFromClass(ClubViewCell.class)];
+    cell.clubObject = clubObject;
     
     return cell;
 }
