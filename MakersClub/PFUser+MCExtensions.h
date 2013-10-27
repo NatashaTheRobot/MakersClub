@@ -11,5 +11,8 @@
 @interface PFUser (MCExtensions)
 
 + (instancetype)userFromGithubData:(NSDictionary *)githubData githubToken:(NSString *)githubToken;
+- (void)updateEmailFromGithub;
+
+- (BOOL)isMemberOfClub:(PFObject *)clubObject;
 
 @end

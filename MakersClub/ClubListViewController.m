@@ -8,6 +8,7 @@
 
 #import "ClubListViewController.h"
 #import "ClubViewCell.h"
+#import "GithubLoginViewController.h"
 
 @interface ClubListViewController ()
 
@@ -35,6 +36,16 @@
 {
     [super viewDidLoad];
 
+}
+
+#pragma mark - Segue
+
+- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
+{
+    if ([segue.destinationViewController isKindOfClass:GithubLoginViewController.class]) {
+        GithubLoginViewController *githubLoginViewController = (GithubLoginViewController *)segue.destinationViewController;
+        githubLoginViewController.clubObject = [self objectAtIndexPath:[self.tableView indexPathForSelectedRow]];
+    }
 }
 
 #pragma mark - Parse

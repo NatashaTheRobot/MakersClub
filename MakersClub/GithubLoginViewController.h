@@ -10,4 +10,6 @@
 
 @interface GithubLoginViewController : UIViewController
 
+@property (strong, nonatomic) PFObject *clubObject;
+
 @end

@@ -7,6 +7,7 @@
 //
 
 #import "PFUser+MCExtensions.h"
+#import "PFObject+MCExtensions.h"
 #import "NSString+MCExtensions.h"
 
 @implementation PFUser (MCExtensions)
@@ -23,6 +24,50 @@
     user[sParseClassUserKeyAvatarURL] = githubData[@"avatar_url"];
     
     return user;
+}
+
+- (BOOL)isMemberOfClub:(PFObject *)clubObject
+{
+    BOOL isMemberOfClub = NO;
+    
+    // Find all clubs for this user
+    PFQuery *clubsQueryForUser = [PFQuery queryWithClassName:sParseClassClub];
+    [clubsQueryForUser whereKey:@"user" equalTo:self];
+    NSArray *clubsForUser = [clubsQueryForUser findObjects];
+    
+    if ([clubObject isIncludedInObjectsArray:clubsForUser]) {
+        isMemberOfClub = YES;
+    }
+    
+    return isMemberOfClub;
+}
+
+- (void)updateEmailFromGithub
+{
+    if (self[sParseClassUserKeyGithubToken] && [self.email isEqualToString:[NSString stringWithFormat:@"%@@email.com", self[sParseClassUserKeyGithubToken]]]) {
+        NSString *userEmailURLString = [NSString stringWithFormat:@"https://api.github.com/user/emails?access_token=%@", self[sParseClassUserKeyGithubToken]];
+        
+        NSMutableURLRequest *request = [[NSMutableURLRequest alloc] initWithURL:[NSURL URLWithString:userEmailURLString]];
+        
+        __weak PFUser *weakSelf = self;
+        [NSURLConnection sendAsynchronousRequest:request queue:[NSOperationQueue new]
+                               completionHandler:^(NSURLResponse *response, NSData *data, NSError *error) {
+                                   
+                                   NSError *jsonError;
+                                   id emailsArray = [NSJSONSerialization JSONObjectWithData:data options:0 error:&jsonError];
+                                   if(!jsonError && !error && emailsArray && [NSJSONSerialization isValidJSONObject:emailsArray])
+                                   {
+                                       weakSelf.email = emailsArray[0];
+                                       [weakSelf saveInBackgroundWithBlock:^(BOOL succeeded, NSError *error) {
+                                           if (error) {
+                                               if ([NSString isValidString:weakSelf.email]) {
+                                                   [weakSelf saveEventually];
+                                               }
+                                           }
+                                       }];
+                                   }
+                               }];
+    }
 }
 
 @end

@@ -41,6 +41,7 @@
 		9C99E1E4181C8C110019E93A /* NSDictionary+MCExtensions.m in Sources */ = {isa = PBXBuildFile; fileRef = 9C99E1E3181C8C110019E93A /* NSDictionary+MCExtensions.m */; };
 		9C99E1E7181D72BD0019E93A /* PFUser+MCExtensions.m in Sources */ = {isa = PBXBuildFile; fileRef = 9C99E1E6181D72BD0019E93A /* PFUser+MCExtensions.m */; };
 		9C99E1EA181D73A40019E93A /* NSString+MCExtensions.m in Sources */ = {isa = PBXBuildFile; fileRef = 9C99E1E9181D73A40019E93A /* NSString+MCExtensions.m */; };
+		9C99E1ED181DBB8B0019E93A /* PFObject+MCExtensions.m in Sources */ = {isa = PBXBuildFile; fileRef = 9C99E1EC181DBB8B0019E93A /* PFObject+MCExtensions.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -100,6 +101,8 @@
 		9C99E1E6181D72BD0019E93A /* PFUser+MCExtensions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "PFUser+MCExtensions.m"; sourceTree = "<group>"; };
 		9C99E1E8181D73A40019E93A /* NSString+MCExtensions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+MCExtensions.h"; sourceTree = "<group>"; };
 		9C99E1E9181D73A40019E93A /* NSString+MCExtensions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+MCExtensions.m"; sourceTree = "<group>"; };
+		9C99E1EB181DBB8B0019E93A /* PFObject+MCExtensions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "PFObject+MCExtensions.h"; sourceTree = "<group>"; };
+		9C99E1EC181DBB8B0019E93A /* PFObject+MCExtensions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "PFObject+MCExtensions.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -256,8 +259,7 @@
 		9C99E1AF181C18500019E93A /* Categories */ = {
 			isa = PBXGroup;
 			children = (
-				9C99E1E5181D72BD0019E93A /* PFUser+MCExtensions.h */,
-				9C99E1E6181D72BD0019E93A /* PFUser+MCExtensions.m */,
+				9C99E1EE181DBB9A0019E93A /* ParseExtensions */,
 				9C99E1B0181C187B0019E93A /* UIImage+MCExtensions.h */,
 				9C99E1B1181C187B0019E93A /* UIImage+MCExtensions.m */,
 				9C99E1E2181C8C110019E93A /* NSDictionary+MCExtensions.h */,
@@ -266,6 +268,17 @@
 				9C99E1E9181D73A40019E93A /* NSString+MCExtensions.m */,
 			);
 			name = Categories;
+			sourceTree = "<group>";
+		};
+		9C99E1EE181DBB9A0019E93A /* ParseExtensions */ = {
+			isa = PBXGroup;
+			children = (
+				9C99E1E5181D72BD0019E93A /* PFUser+MCExtensions.h */,
+				9C99E1E6181D72BD0019E93A /* PFUser+MCExtensions.m */,
+				9C99E1EB181DBB8B0019E93A /* PFObject+MCExtensions.h */,
+				9C99E1EC181DBB8B0019E93A /* PFObject+MCExtensions.m */,
+			);
+			name = ParseExtensions;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -375,6 +388,7 @@
 				9C99E1AE181C176A0019E93A /* ClubViewCell.m in Sources */,
 				9C99E1E1181C8B210019E93A /* GithubAuthWebView.m in Sources */,
 				9C99E1EA181D73A40019E93A /* NSString+MCExtensions.m in Sources */,
+				9C99E1ED181DBB8B0019E93A /* PFObject+MCExtensions.m in Sources */,
 				9C99E161181BFD310019E93A /* main.m in Sources */,
 				9C99E1E7181D72BD0019E93A /* PFUser+MCExtensions.m in Sources */,
 			);
