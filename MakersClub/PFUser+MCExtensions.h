@@ -13,6 +13,7 @@
 + (instancetype)userFromGithubData:(NSDictionary *)githubData githubToken:(NSString *)githubToken;
 - (void)updateEmailFromGithub;
 
+- (NSArray *)clubs;
 - (BOOL)isMemberOfClub:(PFObject *)clubObject;
 
 @end

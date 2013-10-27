@@ -11,5 +11,6 @@
 @interface GithubLoginViewController : UIViewController
 
 @property (strong, nonatomic) PFObject *clubObject;
+@property (retain) PFRelation *users;
 
 @end

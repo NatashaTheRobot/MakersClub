@@ -19,7 +19,6 @@
 
 @implementation GithubLoginViewController
 
-
 - (void)viewDidLoad
 {
     [super viewDidLoad];

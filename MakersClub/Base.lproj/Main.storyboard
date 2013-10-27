@@ -21,7 +21,7 @@
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="iOS Tech Talks" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FIQ-oa-wgb">
-                                            <rect key="frame" x="53" y="11" width="221" height="21"/>
+                                            <rect key="frame" x="53" y="11" width="234" height="21"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                             <nil key="highlightedColor"/>
@@ -30,20 +30,17 @@
                                             <rect key="frame" x="20" y="9" width="25" height="25"/>
                                             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                             <constraints>
-                                                <constraint firstAttribute="height" constant="25" id="OJs-px-hiQ"/>
-                                                <constraint firstAttribute="width" constant="25" id="mUQ-bC-Z7U"/>
+                                                <constraint firstAttribute="width" constant="25" id="UtB-Rd-W0u"/>
                                             </constraints>
                                         </imageView>
                                     </subviews>
                                     <constraints>
-                                        <constraint firstAttribute="bottom" secondItem="7zW-uk-rXB" secondAttribute="bottom" constant="9" id="1ET-lF-nyo"/>
-                                        <constraint firstItem="7zW-uk-rXB" firstAttribute="top" secondItem="yH4-bG-QPw" secondAttribute="top" constant="9" id="3GI-Dn-70D"/>
-                                        <constraint firstAttribute="trailing" secondItem="FIQ-oa-wgb" secondAttribute="trailing" constant="13" id="D2T-xk-Wng"/>
-                                        <constraint firstItem="FIQ-oa-wgb" firstAttribute="leading" secondItem="7zW-uk-rXB" secondAttribute="trailing" constant="8" id="Ej4-Jn-6V4"/>
-                                        <constraint firstItem="7zW-uk-rXB" firstAttribute="leading" secondItem="yH4-bG-QPw" secondAttribute="leading" constant="20" id="YdW-1E-gLW"/>
-                                        <constraint firstAttribute="bottom" secondItem="FIQ-oa-wgb" secondAttribute="bottom" constant="11" id="cuz-Xb-eHi"/>
-                                        <constraint firstItem="FIQ-oa-wgb" firstAttribute="top" secondItem="yH4-bG-QPw" secondAttribute="top" constant="11" id="yW5-af-WdB"/>
-                                        <constraint firstAttribute="trailing" secondItem="FIQ-oa-wgb" secondAttribute="trailing" constant="13" id="zSh-Io-eUe"/>
+                                        <constraint firstItem="FIQ-oa-wgb" firstAttribute="leading" secondItem="7zW-uk-rXB" secondAttribute="trailing" constant="8" symbolic="YES" id="0A8-93-91i"/>
+                                        <constraint firstItem="7zW-uk-rXB" firstAttribute="centerY" secondItem="yH4-bG-QPw" secondAttribute="centerY" id="T29-Bc-dIR"/>
+                                        <constraint firstItem="7zW-uk-rXB" firstAttribute="leading" secondItem="yH4-bG-QPw" secondAttribute="leading" constant="20" symbolic="YES" id="Zfk-jO-Huc"/>
+                                        <constraint firstItem="7zW-uk-rXB" firstAttribute="centerY" secondItem="FIQ-oa-wgb" secondAttribute="centerY" id="eLO-EP-bDq"/>
+                                        <constraint firstAttribute="trailing" secondItem="FIQ-oa-wgb" secondAttribute="trailing" id="nNa-DJ-CCn"/>
+                                        <constraint firstItem="7zW-uk-rXB" firstAttribute="top" secondItem="yH4-bG-QPw" secondAttribute="top" constant="9" id="uom-8k-DYm"/>
                                     </constraints>
                                 </tableViewCellContentView>
                                 <inset key="separatorInset" minX="53" minY="0.0" maxX="0.0" maxY="0.0"/>

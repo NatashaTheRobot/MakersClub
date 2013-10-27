@@ -26,16 +26,18 @@
     return user;
 }
 
+- (NSArray *)clubs
+{
+    PFRelation *clubsRelation = [self relationforKey:sParseClassUserRelationClubs];
+    PFQuery *clubsQuery = [clubsRelation query];
+    return [clubsQuery findObjects];
+}
+
 - (BOOL)isMemberOfClub:(PFObject *)clubObject
 {
     BOOL isMemberOfClub = NO;
     
-    // Find all clubs for this user
-    PFQuery *clubsQueryForUser = [PFQuery queryWithClassName:sParseClassClub];
-    [clubsQueryForUser whereKey:@"user" equalTo:self];
-    NSArray *clubsForUser = [clubsQueryForUser findObjects];
-    
-    if ([clubObject isIncludedInObjectsArray:clubsForUser]) {
+    if ([clubObject isIncludedInObjectsArray:[self clubs]]) {
         isMemberOfClub = YES;
     }
     
@@ -59,10 +61,8 @@
                                    {
                                        weakSelf.email = emailsArray[0];
                                        [weakSelf saveInBackgroundWithBlock:^(BOOL succeeded, NSError *error) {
-                                           if (error) {
-                                               if ([NSString isValidString:weakSelf.email]) {
-                                                   [weakSelf saveEventually];
-                                               }
+                                           if (error && [NSString isValidString:weakSelf.email]) {
+                                               [weakSelf saveEventually];
                                            }
                                        }];
                                    }
