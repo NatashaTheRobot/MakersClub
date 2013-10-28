@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="4510" systemVersion="12F37" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="Fk0-N3-4Hc">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="4514" systemVersion="13A603" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="Fk0-N3-4Hc">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="3742"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="3746"/>
     </dependencies>
     <scenes>
         <!--Club List View Controller - Clubs-->
@@ -47,7 +47,6 @@
                                 <connections>
                                     <outlet property="iconImageView" destination="7zW-uk-rXB" id="3Qq-iD-geN"/>
                                     <outlet property="titleTextLabel" destination="FIQ-oa-wgb" id="yUC-Ms-H3v"/>
-                                    <segue destination="FR5-lh-R1x" kind="push" id="yfK-Ez-0EB"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
@@ -55,6 +54,9 @@
                     <navigationItem key="navigationItem" title="Clubs" id="KWW-tf-qdX">
                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="RDp-6o-iOa"/>
                     </navigationItem>
+                    <connections>
+                        <segue destination="FR5-lh-R1x" kind="push" identifier="ClubListToGithubLogin" id="O95-Ii-dns"/>
+                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="hQk-ze-Vv1" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

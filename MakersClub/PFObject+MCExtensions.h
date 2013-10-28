@@ -11,5 +11,6 @@
 @interface PFObject (MCExtensions)
 
 - (BOOL)isIncludedInObjectsArray:(NSArray *)parseObjectsArray;
+- (NSArray *)objectsForRelationKey:(NSString *)relationKey;
 
 @end
