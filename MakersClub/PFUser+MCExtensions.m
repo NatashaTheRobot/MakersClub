@@ -26,18 +26,22 @@
     return user;
 }
 
-- (NSArray *)clubs
++ (NSArray *)emailsForUsers:(NSArray *)users
 {
-    PFRelation *clubsRelation = [self relationforKey:sParseClassUserRelationClubs];
-    PFQuery *clubsQuery = [clubsRelation query];
-    return [clubsQuery findObjects];
+    NSMutableArray *emailsArray = [[NSMutableArray alloc] initWithCapacity:users.count];
+    
+    [users enumerateObjectsUsingBlock:^(PFUser *user, NSUInteger idx, BOOL *stop) {
+        [emailsArray addObject:user.email];
+    }];
+    
+    return [emailsArray copy];
 }
 
-- (BOOL)isMemberOfClub:(PFObject *)clubObject
+- (BOOL)isMemberOfClub:(PFObject *)club
 {
     BOOL isMemberOfClub = NO;
     
-    if ([clubObject isIncludedInObjectsArray:[self clubs]]) {
+    if ([club isIncludedInObjectsArray:[self objectsForRelationKey:sParseClassUserRelationClubs]]) {
         isMemberOfClub = YES;
     }
     

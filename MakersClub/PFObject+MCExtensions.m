@@ -24,4 +24,11 @@
     return includedInArray;
 }
 
+- (NSArray *)objectsForRelationKey:(NSString *)relationKey
+{
+    PFRelation *relation = [self relationforKey:relationKey];
+    PFQuery *relationQuery = [relation query];
+    return [relationQuery findObjects];
+}
+
 @end

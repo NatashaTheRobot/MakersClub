@@ -42,6 +42,8 @@
 		9C99E1E7181D72BD0019E93A /* PFUser+MCExtensions.m in Sources */ = {isa = PBXBuildFile; fileRef = 9C99E1E6181D72BD0019E93A /* PFUser+MCExtensions.m */; };
 		9C99E1EA181D73A40019E93A /* NSString+MCExtensions.m in Sources */ = {isa = PBXBuildFile; fileRef = 9C99E1E9181D73A40019E93A /* NSString+MCExtensions.m */; };
 		9C99E1ED181DBB8B0019E93A /* PFObject+MCExtensions.m in Sources */ = {isa = PBXBuildFile; fileRef = 9C99E1EC181DBB8B0019E93A /* PFObject+MCExtensions.m */; };
+		9CDBDA48181EB0EB00443703 /* MessageUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9CDBDA47181EB0EB00443703 /* MessageUI.framework */; };
+		9CDBDA4B181EBB7200443703 /* UIAlertView+MCExtensions.m in Sources */ = {isa = PBXBuildFile; fileRef = 9CDBDA4A181EBB7200443703 /* UIAlertView+MCExtensions.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -103,6 +105,9 @@
 		9C99E1E9181D73A40019E93A /* NSString+MCExtensions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+MCExtensions.m"; sourceTree = "<group>"; };
 		9C99E1EB181DBB8B0019E93A /* PFObject+MCExtensions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "PFObject+MCExtensions.h"; sourceTree = "<group>"; };
 		9C99E1EC181DBB8B0019E93A /* PFObject+MCExtensions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "PFObject+MCExtensions.m"; sourceTree = "<group>"; };
+		9CDBDA47181EB0EB00443703 /* MessageUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MessageUI.framework; path = System/Library/Frameworks/MessageUI.framework; sourceTree = SDKROOT; };
+		9CDBDA49181EBB7200443703 /* UIAlertView+MCExtensions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIAlertView+MCExtensions.h"; sourceTree = "<group>"; };
+		9CDBDA4A181EBB7200443703 /* UIAlertView+MCExtensions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIAlertView+MCExtensions.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -110,6 +115,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9CDBDA48181EB0EB00443703 /* MessageUI.framework in Frameworks */,
 				9C99E19C181C047D0019E93A /* SystemConfiguration.framework in Frameworks */,
 				9C99E19A181C04730019E93A /* StoreKit.framework in Frameworks */,
 				9C99E198181C045E0019E93A /* Security.framework in Frameworks */,
@@ -161,6 +167,7 @@
 		9C99E153181BFD310019E93A /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				9CDBDA47181EB0EB00443703 /* MessageUI.framework */,
 				9C99E19B181C047D0019E93A /* SystemConfiguration.framework */,
 				9C99E199181C04730019E93A /* StoreKit.framework */,
 				9C99E197181C045E0019E93A /* Security.framework */,
@@ -266,6 +273,8 @@
 				9C99E1E3181C8C110019E93A /* NSDictionary+MCExtensions.m */,
 				9C99E1E8181D73A40019E93A /* NSString+MCExtensions.h */,
 				9C99E1E9181D73A40019E93A /* NSString+MCExtensions.m */,
+				9CDBDA49181EBB7200443703 /* UIAlertView+MCExtensions.h */,
+				9CDBDA4A181EBB7200443703 /* UIAlertView+MCExtensions.m */,
 			);
 			name = Categories;
 			sourceTree = "<group>";
@@ -385,6 +394,7 @@
 				9C99E1DE181C8A860019E93A /* GithubLoginViewController.m in Sources */,
 				9C99E165181BFD310019E93A /* AppDelegate.m in Sources */,
 				9C99E1A3181C06F50019E93A /* ClubListViewController.m in Sources */,
+				9CDBDA4B181EBB7200443703 /* UIAlertView+MCExtensions.m in Sources */,
 				9C99E1AE181C176A0019E93A /* ClubViewCell.m in Sources */,
 				9C99E1E1181C8B210019E93A /* GithubAuthWebView.m in Sources */,
 				9C99E1EA181D73A40019E93A /* NSString+MCExtensions.m in Sources */,
