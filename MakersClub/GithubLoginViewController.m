@@ -104,24 +104,15 @@
 
 - (void)loginUser:(PFUser *)user
 {
-    __weak GithubLoginViewController *weakSelf;
+    __weak GithubLoginViewController *weakSelf = self;
     [PFUser logInWithUsernameInBackground:user.username password:sParseClassUserDefaultPassword block:^(PFUser *user, NSError *error) {
         if (user) {
             [user updateEmailFromGithub];
-            [weakSelf redirectUser:user];
+            [weakSelf.delegate redirectCurrentUserToClub:weakSelf.club];
         } else if (error) {
             [weakSelf handleError:error];
         }
     }];
-}
-
-- (void)redirectUser:(PFUser *)user
-{
-    if ([user isMemberOfClub:self.clubObject]) {
-        // proceed to club page
-    } else {
-        // email club organizer
-    }
 }
 
 - (void)handleError:(NSError *)error

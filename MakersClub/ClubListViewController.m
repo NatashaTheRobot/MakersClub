@@ -16,7 +16,7 @@
 
 NSString * const kSegueClubListToGithubLogin = @"ClubListToGithubLogin";
 
-@interface ClubListViewController () <MFMailComposeViewControllerDelegate>
+@interface ClubListViewController () <MFMailComposeViewControllerDelegate, ClubControllerDelegate, UIAlertViewDelegate>
 
 @property (strong, nonatomic) UIAlertView *alertView;
 
@@ -59,7 +59,8 @@ NSString * const kSegueClubListToGithubLogin = @"ClubListToGithubLogin";
 {
     if ([segue.destinationViewController isKindOfClass:GithubLoginViewController.class]) {
         GithubLoginViewController *githubLoginViewController = (GithubLoginViewController *)segue.destinationViewController;
-        githubLoginViewController.clubObject = [self objectAtIndexPath:[self.tableView indexPathForSelectedRow]];
+        githubLoginViewController.club = [self objectAtIndexPath:[self.tableView indexPathForSelectedRow]];
+        githubLoginViewController.delegate = self;
     }
 }
 
@@ -80,7 +81,7 @@ NSString * const kSegueClubListToGithubLogin = @"ClubListToGithubLogin";
     return query;
 }
 
-#pragma mark - Table View Delegate Overwrites
+#pragma mark - Table View Delegate
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath object:(PFObject *)clubObject
 {
@@ -93,6 +94,14 @@ NSString * const kSegueClubListToGithubLogin = @"ClubListToGithubLogin";
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
     PFObject *club = [self objectAtIndexPath:indexPath];
+    
+    [self redirectCurrentUserToClub:club];
+}
+
+#pragma mark - Club Controller Delegate
+
+- (void)redirectCurrentUserToClub:(PFObject *)club
+{
     PFUser *currentUser = [PFUser currentUser];
     if (!currentUser) {
         [self performSegueWithIdentifier:kSegueClubListToGithubLogin sender:self];
@@ -125,6 +134,29 @@ NSString * const kSegueClubListToGithubLogin = @"ClubListToGithubLogin";
         self.alertView = [UIAlertView alertForMailerComposerCantSendMailToRecipients:emailRecipients];
         [self.alertView show];
     }
+}
+
+- (void)mailComposeController:(MFMailComposeViewController*)controller didFinishWithResult:(MFMailComposeResult)result error:(NSError*)error
+{
+    __weak  ClubListViewController *weakSelf = self;
+    [controller dismissViewControllerAnimated:YES completion:^{
+        
+        if (result == MFMailComposeResultSent) {
+            weakSelf.alertView = [[UIAlertView alloc] initWithTitle:@"Success!"
+                                                            message:@"Your email was sent to the club organizer. The organizer will get back to you with further application instructions."
+                                                           delegate:self
+                                                  cancelButtonTitle:@"Ok"
+                                                  otherButtonTitles:nil];
+        } else {
+            weakSelf.alertView = [[UIAlertView alloc] initWithTitle:@"Whoops!"
+                                                            message:@"Your email was not sent! Try again to apply for membership to this club!"
+                                                           delegate:self
+                                                  cancelButtonTitle:@"Ok"
+                                                  otherButtonTitles:nil];
+        }
+        [weakSelf.alertView show];
+        [weakSelf.navigationController popToRootViewControllerAnimated:YES];
+    }];
 }
 
 @end
