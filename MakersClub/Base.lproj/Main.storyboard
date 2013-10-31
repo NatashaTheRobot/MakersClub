@@ -52,7 +52,11 @@
                         </prototypes>
                     </tableView>
                     <navigationItem key="navigationItem" title="Clubs" id="KWW-tf-qdX">
-                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="RDp-6o-iOa"/>
+                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="RDp-6o-iOa">
+                            <connections>
+                                <action selector="onAddClubButtonTap:" destination="OO4-zh-k7L" id="tll-Si-Uq5"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
                     <connections>
                         <segue destination="FR5-lh-R1x" kind="push" identifier="ClubListToGithubLogin" id="O95-Ii-dns"/>

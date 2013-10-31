@@ -20,6 +20,8 @@ NSString * const kSegueClubListToGithubLogin = @"ClubListToGithubLogin";
 
 @property (strong, nonatomic) UIAlertView *alertView;
 
+@property (strong, nonatomic) MFMailComposeViewController *clubMembershipMailComposeViewController;
+
 @end
 
 @implementation ClubListViewController
@@ -52,6 +54,14 @@ NSString * const kSegueClubListToGithubLogin = @"ClubListToGithubLogin";
         [self.alertView dismissWithClickedButtonIndex:self.alertView.cancelButtonIndex animated:NO];
     }
 }
+
+#pragma mark - Actions
+
+- (IBAction)onAddClubButtonTap:(id)sender
+{
+    [self showMailComposerForAddingClub];
+}
+
 
 #pragma mark - Segue
 
@@ -106,7 +116,7 @@ NSString * const kSegueClubListToGithubLogin = @"ClubListToGithubLogin";
     if (!currentUser) {
         [self performSegueWithIdentifier:kSegueClubListToGithubLogin sender:self];
     } else if (![currentUser isMemberOfClub:club]){
-        [self showMailComposerForClub:club];
+        [self showMailComposerForClubMembership:club];
     } else {
         // if user is member of club, send them to the club page!
     }
@@ -114,7 +124,7 @@ NSString * const kSegueClubListToGithubLogin = @"ClubListToGithubLogin";
 
 #pragma mark - Private Methods
 
-- (void)showMailComposerForClub:(PFObject *)club
+- (void)showMailComposerForClubMembership:(PFObject *)club
 {
     NSArray *clubOrganizers = [club objectsForRelationKey:sParseClassClubRelationOrganizers];
     NSArray *emailRecipients = [PFUser emailsForUsers:clubOrganizers];
@@ -124,19 +134,49 @@ NSString * const kSegueClubListToGithubLogin = @"ClubListToGithubLogin";
         mailerViewController.mailComposeDelegate = self;
         
         [mailerViewController setToRecipients:emailRecipients];
-        [mailerViewController setSubject:[NSString stringWithFormat:@"MakersClub - %@ Application", club[sParseClassClubKeyTitle]]];
+        [mailerViewController setSubject:[NSString stringWithFormat:@"Application for %@ on Makers Club", club[sParseClassClubKeyTitle]]];
         
         NSString *emailBody = [NSString stringWithFormat:@"I'm interested in joining the %@ on Makers Club.", club[sParseClassClubKeyTitle]];
         [mailerViewController setMessageBody:emailBody isHTML:NO];
         
-        [self presentViewController:mailerViewController animated:YES completion:nil];
+        self.clubMembershipMailComposeViewController = mailerViewController;
+        
+        [self presentViewController:self.clubMembershipMailComposeViewController animated:YES completion:nil];
     } else {
         self.alertView = [UIAlertView alertForMailerComposerCantSendMailToRecipients:emailRecipients];
         [self.alertView show];
     }
 }
 
+- (void)showMailComposerForAddingClub
+{
+    if ([MFMailComposeViewController canSendMail]) {
+        MFMailComposeViewController *mailerViewController = [[MFMailComposeViewController alloc] init];
+        mailerViewController.mailComposeDelegate = self;
+        
+        [mailerViewController setToRecipients:@[sEmailAddressToAddClub]];
+        [mailerViewController setSubject:@"Add Club on Makers Club"];
+        
+        NSString *emailBody = [NSString stringWithFormat:@"I'm interested in creating a club on Makers Club!"];
+        [mailerViewController setMessageBody:emailBody isHTML:NO];
+        
+        [self presentViewController:mailerViewController animated:YES completion:nil];
+    } else {
+        self.alertView = [UIAlertView alertForMailerComposerCantSendMailToRecipients:@[sEmailAddressToAddClub]];
+        [self.alertView show];
+    }
+}
+
 - (void)mailComposeController:(MFMailComposeViewController*)controller didFinishWithResult:(MFMailComposeResult)result error:(NSError*)error
+{
+    if (controller == self.clubMembershipMailComposeViewController) {
+        [self onClubMembershipRequestCompletionForMailController:controller result:result];
+    } else {
+        [self onAddClubRequestCompletionForMailerController:controller result:result];
+    }
+}
+
+- (void)onClubMembershipRequestCompletionForMailController:(MFMailComposeViewController*)controller result:(MFMailComposeResult)result
 {
     __weak  ClubListViewController *weakSelf = self;
     [controller dismissViewControllerAnimated:YES completion:^{
@@ -156,6 +196,28 @@ NSString * const kSegueClubListToGithubLogin = @"ClubListToGithubLogin";
         }
         [weakSelf.alertView show];
         [weakSelf.navigationController popToRootViewControllerAnimated:YES];
+    }];
+}
+
+- (void)onAddClubRequestCompletionForMailerController:(MFMailComposeViewController*)controller result:(MFMailComposeResult)result
+{
+    __weak  ClubListViewController *weakSelf = self;
+    [controller dismissViewControllerAnimated:YES completion:^{
+        
+        if (result == MFMailComposeResultSent) {
+            weakSelf.alertView = [[UIAlertView alloc] initWithTitle:@"Success!"
+                                                            message:@"Your email was sent to the Makers Club organizers. We will get back to you shortly!"
+                                                           delegate:self
+                                                  cancelButtonTitle:@"Ok"
+                                                  otherButtonTitles:nil];
+        } else {
+            weakSelf.alertView = [[UIAlertView alloc] initWithTitle:@"Whoops!"
+                                                            message:@"Your email was not sent! Try again to create your very own Makers Club club!"
+                                                           delegate:self
+                                                  cancelButtonTitle:@"Ok"
+                                                  otherButtonTitles:nil];
+        }
+        [weakSelf.alertView show];
     }];
 }
 
