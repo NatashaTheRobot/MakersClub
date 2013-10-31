@@ -30,17 +30,17 @@
                                             <rect key="frame" x="20" y="9" width="25" height="25"/>
                                             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                             <constraints>
+                                                <constraint firstAttribute="height" constant="25" id="JeS-zT-3fP"/>
                                                 <constraint firstAttribute="width" constant="25" id="UtB-Rd-W0u"/>
                                             </constraints>
                                         </imageView>
                                     </subviews>
                                     <constraints>
-                                        <constraint firstItem="FIQ-oa-wgb" firstAttribute="leading" secondItem="7zW-uk-rXB" secondAttribute="trailing" constant="8" symbolic="YES" id="0A8-93-91i"/>
-                                        <constraint firstItem="7zW-uk-rXB" firstAttribute="centerY" secondItem="yH4-bG-QPw" secondAttribute="centerY" id="T29-Bc-dIR"/>
-                                        <constraint firstItem="7zW-uk-rXB" firstAttribute="leading" secondItem="yH4-bG-QPw" secondAttribute="leading" constant="20" symbolic="YES" id="Zfk-jO-Huc"/>
-                                        <constraint firstItem="7zW-uk-rXB" firstAttribute="centerY" secondItem="FIQ-oa-wgb" secondAttribute="centerY" id="eLO-EP-bDq"/>
-                                        <constraint firstAttribute="trailing" secondItem="FIQ-oa-wgb" secondAttribute="trailing" id="nNa-DJ-CCn"/>
-                                        <constraint firstItem="7zW-uk-rXB" firstAttribute="top" secondItem="yH4-bG-QPw" secondAttribute="top" constant="9" id="uom-8k-DYm"/>
+                                        <constraint firstItem="7zW-uk-rXB" firstAttribute="leading" secondItem="yH4-bG-QPw" secondAttribute="leading" constant="20" id="Csw-Dx-8Xe"/>
+                                        <constraint firstAttribute="trailing" secondItem="FIQ-oa-wgb" secondAttribute="trailing" id="HTW-l0-Ix0"/>
+                                        <constraint firstAttribute="centerY" secondItem="FIQ-oa-wgb" secondAttribute="centerY" id="RO4-x3-rKv"/>
+                                        <constraint firstAttribute="centerY" secondItem="7zW-uk-rXB" secondAttribute="centerY" id="mg0-qg-cGd"/>
+                                        <constraint firstItem="FIQ-oa-wgb" firstAttribute="leading" secondItem="7zW-uk-rXB" secondAttribute="trailing" constant="8" id="xSU-gO-qZu"/>
                                     </constraints>
                                 </tableViewCellContentView>
                                 <inset key="separatorInset" minX="53" minY="0.0" maxX="0.0" maxY="0.0"/>
